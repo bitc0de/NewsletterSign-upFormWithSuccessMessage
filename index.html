@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+  <script src="./app.js" crossorigin="anonymous"></script>
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body class="bg-charcoalgrey font-fm">
+<main id="main" class="container bg-white mx-auto items-center lg:mt-28 lg:rounded-3xl flex flex-col-reverse lg:flex-row shadow-2xl w-screen h-screen lg:h-[40rem] lg:w-[55rem]">
+  <div class="md:w-1/2 sm:w-full sm:flex-col lg:py-6 lg:ml-[0.2rem] md:ml-[1.5rem]">
+      <span class="text-[2.5rem] lg:text-5xl font-bold text-center w-[100%] lg:mb-10 ml-10 text-darkslategrey">Stay updated!</span>
+      <p class="text-left ml-10 text-[16px] mt-5 lg:mt-5">
+        Join 60,000+ product managers receiving monthly updates on:
+        <span class="flex mb-2 mt-6 mr-10 lg:mr-0">
+          <svg class="mr-3" xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"><g fill="none"><circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155"/><path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8"/></g></svg>
+          Product discovery and building what matters
+        </span>
+        
+        <span class="flex  mb-2 mr-10 lg:mr-0">
+          <svg class="mr-3" xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"><g fill="none"><circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155"/><path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8"/></g></svg>          Measuring to ensure updates are a success
+        </span>
+        
+        <span class="flex mr-10 lg:mr-0">
+          <svg class="mr-3" xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"><g fill="none"><circle cx="10.5" cy="10.5" r="10.5" fill="#FF6155"/><path stroke="#FFF" stroke-width="2" d="M6 11.381 8.735 14 15 8"/></g></svg>
+          And much more!
+        </span>
+      </p>    
+
+      <form class="ml-10 mb-10 mt-12 lg:mb-0 lg:mt-10 flex flex-col">
+        <label class="text-xs mb-2 font-bold">Email address</label>
+        <input id="email" class="w-[88%] lg:w-[22rem] pl-4 rounded border-2 border-gray-200 h-12 text-sm placeholder:text-slate-400" type="email" placeholder="email@company.com" style="border-color: #ebebeb;"></input>
+
+        <input id="send" class="bg-darkslategrey rounded mt-5 h-12 text-white hover:bg-gradient-to-r from-tomato-pink to-tomato-light cursor-pointer w-[88%] lg:w-[22rem]" type="submit" value="Subscribe to monthly newsletter"></input>
+      </form>
+      <style>
+        .tooltip {
+            display: none;
+            position: absolute;
+            background-color: #ff0000;
+            color: #fff;
+            padding: 5px;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+      </style>
+      <div class="tooltip" id="tooltip"></div>
+      
+    </div>
+    <div id="headerImage" class="h-[100%] lg:w-1/2 md:w-1/2 sm:flex-col top-0 lg:py-6 lg:mr-[0.2rem] md:mr-[1.5rem]">
+            
+    </div>
+  </main>
+
+  <div id="success" class="container hidden bg-white mx-auto items-left lg:mt-48 lg:rounded-3xl flex flex-col md:flex-col shadow-2xl w-scren h-screen lg:h-[29rem] lg:w-[27rem]">
+    <div class="ml-12 mr-12 mt-44 lg:mt-8">
+      <img class="w-[48px] h-[48px] mb-8" src="./assets/images/icon-success.svg"/>
+      <h1 class="text-[2.2rem] lg:text-5xl font-bold text-left w-[100%] mb-5 text-darkslategrey">Thanks for subscribing!</h1>
+      <p class="text-[16px]">A confirmation email has been sent to <span id="userEmail" class="font-bold"></span>. 
+      Please open it and click the button inside to confirm your subscription.</p>
+      
+    </div>
+    <button id="return" class="bg-darkslategrey rounded-md mt-52 lg:mt-8 mb-12 h-12 ml-12 mr-12 text-white hover:bg-gradient-to-r from-tomato-pink to-tomato-light cursor-pointer">Dismiss message</button>
+
+  </div>
+
+  
+  
+  <div class="attribution mt-12">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">bitc0de</a>.
+  </div>
+</body>
+</html>
